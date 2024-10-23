@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Розклад занять груп</title>
+    <style>
+        body {
+            background-color: #90EE90;
+            font-family: Arial, sans-serif;
+        }
+        .title {
+            color: red;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .day-link {
+            color: blue;
+            font-size: 24px;
+            font-family: Courier, monospace;
+            margin-top: 40px;
+        }
+        .spacer {
+            height: 800px;
+        }
+        table.days-of-week, table.schedule {
+            width: 75%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table.days-of-week td {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            font-size: 24px;
+        }
+        table.days-of-week td a {
+            text-decoration: none;
+            color: black;
+        }
+        table.days-of-week td a:hover {
+            text-decoration: underline;
+        }
+        table.schedule th, table.schedule td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        table.schedule th {
+            background-color: #ffe0e0;
+        }
+        table.schedule td {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <table class="days-of-week">
+        <tr>
+            <td><a href="#ПН">Понеділок</a></td>
+            <td><a href="#ВТ">Вівторок</a></td>
+            <td><a href="#СР">Середа</a></td>
+            <td><a href="#ЧТ">Четвер</a></td>
+            <td><a href="#ПТ">П’ятниця</a></td>
+            <td><a href="#СБ">Субота</a></td>
+        </tr>
+    </table>
+    <div class="spacer"></div>
+
+    <div class="title">Розклад занять груп</div>
+
+    <table class="schedule">
+        <tr>
+            <th colspan="4" id="ПН">Понеділок</th>
+        </tr>
+        <tr>
+            <th>Час</th>
+            <th>Предмет</th>
+            <th>Викладач</th>
+            <th>Аудиторія</th>
+        </tr>
+        <tr>
+            <td>08:30 - 10:00</td>
+            <td>Математика</td>
+            <td>Іваненко І.І.</td>
+            <td>101</td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:45</td>
+            <td>Фізика</td>
+            <td>Петров П.П.</td>
+            <td>102</td>
+        </tr>
+        <tr>
+            <th colspan="4" id="ВТ">Вівторок</th>
+        </tr>
+        <tr>
+            <th>Час</th>
+            <th>Предмет</th>
+            <th>Викладач</th>
+            <th>Аудиторія</th>
+        </tr>
+        <tr>
+            <td>08:30 - 10:00</td>
+            <td>Хімія</td>
+            <td>Сидоренко С.С.</td>
+            <td>103</td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:45</td>
+            <td>Історія</td>
+            <td>Коваленко К.К.</td>
+            <td>104</td>
+        </tr>
+        <tr>
+            <th colspan="4" id="СР">Середа</th>
+        </tr>
+        <tr>
+            <th>Час</th>
+            <th>Предмет</th>
+            <th>Викладач</th>
+            <th>Аудиторія</th>
+        </tr>
+        <tr>
+            <td>08:30 - 10:00</td>
+            <td>Біологія</td>
+            <td>Мельник М.М.</td>
+            <td>105</td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:45</td>
+            <td>Географія</td>
+            <td>Шевченко Ш.Ш.</td>
+            <td>106</td>
+        </tr>
+        <tr>
+            <th colspan="4" id="ЧТ">Четвер</th>
+        </tr>
+        <tr>
+            <th>Час</th>
+            <th>Предмет</th>
+            <th>Викладач</th>
+            <th>Аудиторія</th>
+        </tr>
+        <tr>
+            <td>08:30 - 10:00</td>
+            <td>Інформатика</td>
+            <td>Гончаренко Г.Г.</td>
+            <td>107</td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:45</td>
+            <td>Англійська мова</td>
+            <td>Лисенко Л.Л.</td>
+            <td>108</td>
+        </tr>
+        <tr>
+            <th colspan="4" id="ПТ">П’ятниця</th>
+        </tr>
+        <tr>
+            <th>Час</th>
+            <th>Предмет</th>
+            <th>Викладач</th>
+            <th>Аудиторія</th>
+        </tr>
+        <tr>
+            <td>08:30 - 10:00</td>
+            <td>Фізичне виховання</td>
+            <td>Демченко Д.Д.</td>
+            <td>Спортзал</td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:45</td>
+            <td>Музика</td>
+            <td>Захарченко З.З.</td>
+            <td>109</td>
+        </tr>
+        <tr>
+            <th colspan="4" id="СБ">Субота</th>
+        </tr>
+        <tr>
+            <th>Час</th>
+            <th>Захід</th>
+            <th>Відповідальний</th>
+            <th>Місце</th>
+        </tr>
+        <tr>
+            <td>09:00 - 12:00</td>
+            <td>Факультативні заняття</td>
+            <td>Різні викладачі</td>
+            <td>110</td>
+        </tr>
+        <tr>
+            <td>12:15 - 14:00</td>
+            <td>Клуб англійської мови</td>
+            <td>Смирнов С.С.</td>
+            <td>111</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

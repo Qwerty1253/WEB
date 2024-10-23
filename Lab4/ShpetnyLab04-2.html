@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ShpetnyLab04-2.html</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .line {
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            margin: 10px 0;
+        }
+        .line1 { background-color: #FFCCCC; }
+        .line2 { background-color: #CCFFCC; }
+        .line3 { background-color: #CCCCFF; }
+        .line4 { background-color: #FFFFCC; }
+        .line5 { background-color: #FFCCFF; }
+
+        .text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 24px;
+            font-weight: bold;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .line1 .text {
+            animation: oscillate 3s infinite alternate ease-in-out;
+            left: 0;
+        }
+        @keyframes oscillate {
+            from { left: 0; }
+            to { left: calc(100% - 250px); }
+        }
+
+        .line2 .text {
+            animation: scroll-left 10s linear infinite;
+            left: 100%;
+        }
+        @keyframes scroll-left {
+            from { left: 100%; }
+            to { left: -100%; }
+        }
+
+        .line3 .text {
+            animation: scroll-right 5s linear forwards;
+            right: 100%;
+        }
+        @keyframes scroll-right {
+            from { right: 100%; }
+            to { right: 0%; }
+        }
+
+        .line4 .text {
+            animation: scroll-delay 8s linear infinite;
+            animation-delay: 0s;
+            left: 100%;
+        }
+        .line5 .text {
+            animation: scroll-delay 8s linear infinite;
+            animation-delay: 2s;
+            left: 100%;
+        }
+        @keyframes scroll-delay {
+            0% { left: 100%; }
+            50% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="line line1">
+        <div class="text">Текст коливається з боку в бік</div>
+    </div>
+
+    <div class="line line2">
+        <div class="text">Текст біжить справа наліво та повторюється</div>
+    </div>
+
+    <div class="line line3">
+        <div class="text">Текст біжить зліва направо та зупиняється</div>
+    </div>
+
+    <div class="line line4">
+        <div class="text">Текст із запізненням 0 секунд</div>
+    </div>
+
+    <div class="line line5">
+        <div class="text">Текст із запізненням 2 секунди</div>
+    </div>
+
+    <button onclick="restartAnimations()">Перезапустити анімації</button>
+
+    <script>
+        function restartAnimations() {
+            var elements = document.querySelectorAll('.text');
+            elements.forEach(function(el) {
+                el.style.animation = 'none';
+                el.offsetHeight;
+                el.style.animation = '';
+            });
+        }
+    </script>
+
+</body>
+</html>
