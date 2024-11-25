@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            width: 600px;
+            background-color: #ccffff;
+            padding: 20px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            color: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #999;
+        }
+        .number-cell {
+            width: 40px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Анкета</h2>
+        <form>
+            <table>
+                <tr>
+                    <td class="number-cell">1.</td>
+                    <td>Прізвище</td>
+                    <td><input type="text" name="lastName"></td>
+                </tr>
+                <tr>
+                    <td class="number-cell">2.</td>
+                    <td>Ім'я, по батькові</td>
+                    <td><input type="text" name="firstName"></td>
+                </tr>
+                <tr>
+                    <td class="number-cell">3.</td>
+                    <td>Число і рік народження</td>
+                    <td><input type="text" name="birthDate"></td>
+                </tr>
+                <tr>
+                    <td class="number-cell">4.</td>
+                    <td>Домашня адреса</td>
+                    <td><input type="text" name="address"></td>
+                </tr>
+                <tr>
+                    <td class="number-cell">5.</td>
+                    <td>Місце навчання (роботи)</td>
+                    <td><input type="text" name="studyOrWork"></td>
+                </tr>
+                <tr>
+                    <td class="number-cell">6.</td>
+                    <td>Домашній (робочий) телефон</td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td class="number-cell">7.</td>
+                    <td>E-mail</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td class="number-cell">8.</td>
+                    <td>Область наукових інтересів</td>
+                    <td>
+                        <table>
+                            <tr><td><input type="text" name="int1"></td></tr>
+                            <tr><td><input type="text" name="int2"></td></tr>
+                            <tr><td><input type="text" name="int3"></td></tr>
+                            <tr><td><input type="text" name="int4"></td></tr>
+                            <tr><td><input type="text" name="int5"></td></tr>
+                            <tr><td><input type="text" name="int6"></td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div class="buttons">
+                <button type="reset">Відмінити введення</button>
+                <button type="submit">Надіслати дані та перейти до 2 етапу реєстрації</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

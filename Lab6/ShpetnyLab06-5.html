@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Сенсорне зображення з областями довільної форми</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+    
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+        }
+    
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+    
+</head>
+<body>
+
+<img src="Images/map.jpg" usemap="#image-map" alt="Карта зображення">
+
+<map name="image-map">
+    <!-- Перше поле -->
+    <area shape="rect" coords="11,11,93,160" href="#" alt="Поле 1" title="Це поле 1">
+    <!-- Друге поле -->
+    <area shape="rect" coords="94,10,216,158" href="#" alt="Поле 2" title="Це поле 2">
+    <!-- Третє поле -->
+    <area shape="rect" coords="219,9,310,159" href="#" alt="Поле 3" title="Це поле 3">
+    <!-- Четверте поле -->
+    <area shape="rect" coords="10,161,93,308" href="#" alt="Поле 4" title="Це поле 4">
+    <!-- П'яте поле -->
+    <area shape="rect" coords="95,159,215,308" href="#" alt="Поле 5" title="Це поле 5">
+    <!-- Шосте поле -->
+    <area shape="rect" coords="219,160,308,309" href="#" alt="Поле 6" title="Це поле 6">
+</map>
+
+</body>
+</html>

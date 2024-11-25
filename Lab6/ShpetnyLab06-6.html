@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Наша ІТ-група</title>
+    <style>
+        body {
+            background-image: url('Images/bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(0,0,0,0.7);
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+        main {
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .member {
+            position: relative;
+            background-color: rgba(0,0,0,0.6);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .member img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+        .member h2 {
+            font-size: 32px;
+            margin: 20px 0 10px 0;
+        }
+        .member p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        footer {
+            background-color: rgba(0,0,0,0.8);
+            padding: 10px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+        /* Стилі для спливаючої інформації */
+        .tooltip {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255,255,255,0.9);
+            color: #000;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+            width: 250px;
+            z-index: 10;
+            text-align: left;
+        }
+        .member:hover .tooltip {
+            display: block;
+        }
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: rgba(255,255,255,0.9) transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Наша ІТ-група</h1>
+    </header>
+    <main>
+        <div class="member">
+            <img src="Images/nazar.jpg" alt="Назар" usemap="#nazar-map">
+            <!-- Навігаційна карта для Назара -->
+            <map name="nazar-map">
+                <area shape="circle" coords="100,100,100" href="#" alt="Назар" title="Назар — наш місцевий геній алгоритмів.">
+            </map>
+            <!-- Спливаюча інформація про Назара -->
+            <div class="tooltip">
+                Назар — наш місцевий геній алгоритмів. Кажуть, що він може написати сортування масиву швидше, ніж компілюється "Hello World".
+            </div>
+            <h2>Назар</h2>
+            <p>
+                Назар оптимізує свій код так, щоб зменшити час виконання з O(n²) до O(log n). Він вірить, що індексація масивів починається з 0, а кава — з 10.
+            </p>
+        </div>
+        <div class="member">
+            <img src="Images/igor.jpg" alt="Ігор" usemap="#igor-map">
+            <!-- Навігаційна карта для Ігора -->
+            <map name="igor-map">
+                <area shape="circle" coords="100,100,100" href="#" alt="Ігор" title="Ігор — наш майстер дебагінгу.">
+            </map>
+            <!-- Спливаюча інформація про Ігора -->
+            <div class="tooltip">
+                Ігор може знайти помилку в коді з першого погляду, навіть якщо це чужий код на Perl. Він знає всі комбінації клавіш в IDE.
+            </div>
+            <h2>Ігор</h2>
+            <p>
+                Легенда свідчить, що одного разу Ігор виправив баг просто подивившись на екран монітора. Він може закрити 100 вкладок браузера одним рухом.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Наша ІТ-група</p>
+    </footer>
+</body>
+</html>

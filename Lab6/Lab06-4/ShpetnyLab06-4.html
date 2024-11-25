@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Карта зображення з посиланнями</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .map-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        area {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="map-container">
+    <img src="Images/map.jpg" usemap="#image-map" alt="Карта з декількома геометричними фігурами">
+    <map name="image-map">
+        <area shape="circle" coords="187,171,119" href="ShpetnyLab01-9.html" alt="Домашня сторінка" title="Домашня сторінка">
+        <area shape="poly" coords="346,286,476,64,602,286" href="ShpetnyLab05-3.html" alt="Мої гіперпосилання" title="Мої гіперпосилання">
+        <area shape="rect" coords="695,35,944,283" href="Lab06-3/ShpetnyLab06-3.html" alt="Моя Батьківщина" title="Моя Батьківщина">
+    </map>
+</div>
+
+</body>
+</html>

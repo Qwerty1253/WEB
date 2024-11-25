@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Реєстрації</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: #ffffff;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 50%;
+            max-width: 700px;
+            padding: 20px;
+            margin: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            line-height: 1.5;
+        }
+        input[type="text"], textarea, select {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        input[type="submit"], input[type="reset"], input[type="file"] {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover, input[type="file"]:hover {
+            background: #ff5a45;
+        }
+        .file-upload {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .form-group label {
+            flex: 0 0 200px;
+        }
+        .form-group input[type="text"], .form-group select, .form-group textarea {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Заповніть форму для участі в опитуванні</h2>
+        <form action="/process.html" method="GET" target="_blank">
+            <div class="form-group">
+                <label for="name">Ваше ім'я:</label>
+                <input id="name" name="name" type="text" maxlength="40" size="40" value="">
+            </div>
+            <div class="form-group">
+                <label>Ваша стать:</label>
+                <div>
+                    <input type="radio" name="pol" value="male" id="male">
+                    <label for="male">Чоловіча</label>
+                    <input type="radio" name="pol" value="female" id="female">
+                    <label for="female">Жіноча</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="curs">На якому курсі Ви навчаєтесь?</label>
+                <select id="curs" name="curs">
+                    <option value="1" selected>Перший</option>
+                    <option value="2">Другий</option>
+                    <option value="3">Третій</option>
+                    <option value="4">Четвертий</option>
+                    <option value="5">П'ятий</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Які дисципліни ви вивчаєте на курсі?</label>
+                <div>
+                    <input type="checkbox" name="web" value="yes" id="web" checked>
+                    <label for="web">WEB-програмування</label>
+                    <input type="checkbox" name="eldinam" value="yes" id="eldinam">
+                    <label for="eldinam">Технічна електродинаміка</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="about">Напишіть декілька слів про себе:</label>
+                <textarea id="about" name="about" rows="6" cols="60" wrap="off"></textarea>
+            </div>
+            <div class="buttons">
+                <input type="submit" value=" Відіслати дані ">
+                <input type="reset" value=" Очистити форму ">
+            </div>
+            <div class="file-upload">
+                <label for="file-upload">Додайте файл:</label>
+                <input type="file" id="file-upload" name="friend" size="50" accept="image/*">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

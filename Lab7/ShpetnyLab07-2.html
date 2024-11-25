@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма з Всіма Елементами</title>
+    <style>
+        body {
+            background: #f0f8ff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            width: 60%;
+            max-width: 800px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input[type="text"], 
+        input[type="password"], 
+        textarea, 
+        select, 
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="checkbox"], 
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        input[type="submit"], 
+        input[type="reset"], 
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover, 
+        input[type="reset"]:hover, 
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Форма з Всіма Елементами Форм</h2>
+        <form action="process.html" method="GET" target="_blank">
+            <label for="username">Ім'я користувача:</label>
+            <input id="username" type="text" name="username" placeholder="Введіть ім'я" maxlength="50" required>
+            <label for="password">Пароль:</label>
+            <input id="password" type="password" name="password" placeholder="Введіть пароль" required>
+            <label for="about">Про себе:</label>
+            <textarea id="about" name="about" rows="4" placeholder="..."></textarea>
+            <label>Ваші інтереси:</label>
+            <div>
+                <input type="checkbox" id="web" name="interest" value="web">
+                <label for="web">WEB-програмування</label>
+                <input type="checkbox" id="ai" name="interest" value="ai">
+                <label for="ai">Штучний Інтелект</label>
+                <input type="checkbox" id="iot" name="interest" value="iot">
+                <label for="iot">Процедурне програмування</label>
+            </div>
+            <label>Виберіть стать:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жіноча</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Інше</label>
+            </div>
+            <label for="course">На якому курсі Ви навчаєтесь?</label>
+            <select id="course" name="course">
+                <option value="1">Перший курс</option>
+                <option value="2">Другий курс</option>
+                <option value="3">Третій курс</option>
+                <option value="4">Четвертий курс</option>
+                <option value="5">П'ятий курс</option>
+            </select>
+            <label for="file-upload">Прикріпити файл:</label>
+            <input id="file-upload" type="file" name="userfile" accept="image/*, .pdf, .docx">
+            <div class="full-width buttons">
+                <input type="submit" value="Відправити">
+                <input type="reset" value="Очистити форму">
+                <button type="button" onclick="alert('Це просто звичайна кнопка')">Проста кнопка</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
